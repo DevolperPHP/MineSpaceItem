@@ -22,13 +22,18 @@ class Main extends PluginBase implements Listener{
   public $timer = true;
   
   public function onEnable(){
-    
+    $this->getServer()->getPluginManager()->registerEvents($this, $this);
+    $this->getLogger()->info("$this->prefix §bis §aEnable.");
+    $this->getServer()->getScheduler()->scheduleRepeatingTask(new Time($this), 20);
     @mkdir($this->getDataFolder());
-		$xyz = [
+		$Pos = [
 		
-				'x' => 0,
-				'y' => 0,
-				'z' => 0,
+				'x1' => 0,
+				'y1' => 0,
+				'z1' => 0,
+				'x1' => 0,
+				'y1' => 0,
+				'z1' => 0,
 		
 		];
 		$cfg = new Config($this->getDataFolder() . "config.yml", Config::YAML,$xyz);
