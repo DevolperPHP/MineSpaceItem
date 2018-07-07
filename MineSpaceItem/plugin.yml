@@ -1,1 +1,11 @@
 
+---
+name: MineSpaceItem
+author: JUZEXMOD
+main: MineSpaceItem\Mian
+version: 1.0
+api: 4.0.0
+
+commands:
+  msitem:
+    description: MineSpace item command
